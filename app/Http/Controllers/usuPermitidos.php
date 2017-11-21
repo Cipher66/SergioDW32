@@ -11,7 +11,14 @@ class usuPermitidos extends Controller
 
 
     public function autenticar(){
-        $this->validate(request(),
-            ['NombreUsu' => 'string' | 'required']);
+
+
+        $nombreUsu=request()->get('nombreUsu');
+        
+        $usuPermitido = new usuPermitido();
+        $usuPermitido -> nombreUsu = $nombreUsu;
+        $usuPermitido->save();
+        return (view('/siPermiso'));
+
     }
 }
