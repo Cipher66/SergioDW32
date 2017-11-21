@@ -14,7 +14,7 @@ class usuPermitidos extends Controller
 
 
         $nombreUsu=request()->get('nombreUsu');
-        
+
         $usuPermitido = new usuPermitido();
         $usuPermitido -> nombreUsu = $nombreUsu;
         $usuPermitido->save();
