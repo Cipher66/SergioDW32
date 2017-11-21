@@ -1,0 +1,1 @@
+{{ $_REQUEST['NombreUsu'] }} no tiene permiso.
